@@ -9,4 +9,19 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     clean: true,
   },
+  module: {
+    rules: [
+      { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+    ]
+  }
 };
