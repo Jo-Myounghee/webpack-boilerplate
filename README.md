@@ -1,4 +1,4 @@
-# vanilla-js-boilerplate
+# ✨webpack-boilerplate
 
 ## Install
 
