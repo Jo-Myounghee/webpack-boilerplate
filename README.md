@@ -10,9 +10,19 @@ npm install
 
 ## Build
 
+### production(배포)
+
 ```
 npm run build
 ```
+
+### development(개발)
+
+```
+npm run build:dev
+```
+
+
 
 
 
@@ -20,7 +30,8 @@ npm run build
 
 - webpack
 - style-loader css-loader sass-loader
-- babel-loader babel-core
+- babel-loader babel-core babel-polyfill
+- source-map
 
 
 
