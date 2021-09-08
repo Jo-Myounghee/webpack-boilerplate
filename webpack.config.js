@@ -25,14 +25,14 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      ]
-    },
-    devtool: 'cheap-eval-source-map',
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: './src/index.html'
-      }),
-      new CleanWebpackPlugin()
+      }
     ]
-  };
+  },
+  devtool: 'source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
+    new CleanWebpackPlugin()
+  ]
 };
