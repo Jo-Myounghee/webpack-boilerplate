@@ -1,5 +1,7 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = env => {
   const entryPath =
     env.mode === 'production' ? './public/index.js' : './src/index.js';
@@ -29,6 +31,11 @@ module.exports = env => {
         }
       ]
     },
-    devtool: 'cheap-eval-source-map'
+    devtool: 'cheap-eval-source-map',
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/index.html'
+      })
+    ]
   };
 };
