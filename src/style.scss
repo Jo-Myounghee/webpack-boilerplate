@@ -3,3 +3,8 @@ $body-color: red;
 body {
   color: $body-color;
 }
+
+div {
+  // background-image: url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/283a75e0-967b-47a7-a66d-1db964a32794/mago.jfif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210908%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210908T143429Z&X-Amz-Expires=86400&X-Amz-Signature=355bbc1ccca55af4724074efc9c1eb484494aba6ede6cc72f076e8f90b849fc5&X-Amz-SignedHeaders=host');
+  background-image: url('./mago.png');
+}

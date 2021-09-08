@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/index.js', './src/style.scss'],
+  entry: ['@babel/polyfill', './src/app.js', './src/style.scss'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
@@ -25,6 +25,23 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/i,
+        dependency: { not: ['url'] },
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              fallback: 'file-loader',
+              name: '[name].[ext]?[hash]',
+              outputPath: 'img',
+              publicPath: '../img'
+            }
+          }
+        ],
+        type: 'javascript/auto'
       }
     ]
   },
