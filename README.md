@@ -32,6 +32,7 @@ npm run build:dev
 - style-loader css-loader sass-loader
 - babel-loader babel-core babel-polyfill
 - source-map
+- html-webpack-plugin clean-webpack-plugin
 
 
 
